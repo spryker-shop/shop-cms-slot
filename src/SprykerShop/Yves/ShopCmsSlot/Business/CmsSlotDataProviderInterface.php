@@ -12,10 +12,5 @@ use Generated\Shared\Transfer\CmsSlotContextTransfer;
 
 interface CmsSlotDataProviderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\CmsSlotContextTransfer $cmsSlotContextTransfer
-     *
-     * @return \Generated\Shared\Transfer\CmsSlotContentResponseTransfer
-     */
     public function getSlotContent(CmsSlotContextTransfer $cmsSlotContextTransfer): CmsSlotContentResponseTransfer;
 }

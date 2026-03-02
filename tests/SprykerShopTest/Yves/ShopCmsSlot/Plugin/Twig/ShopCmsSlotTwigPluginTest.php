@@ -58,9 +58,6 @@ class ShopCmsSlotTwigPluginTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testShopCmsSlotTwigPluginReturnsExpectedStringOnValidData(): void
     {
         // Arrange
@@ -89,9 +86,6 @@ class ShopCmsSlotTwigPluginTest extends Unit
         $this->assertSame(static::CONTENT, $shopCmsSlotContent);
     }
 
-    /**
-     * @return void
-     */
     public function testShopCmsSlotTwigPluginThrowsExceptionOnMissingRequiredData(): void
     {
         // Arrange
@@ -120,9 +114,6 @@ class ShopCmsSlotTwigPluginTest extends Unit
             ->getSlotContent($cmsSlotContextTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testShopCmsSlotTwigPluginReturnsEmptyStringIfSlotIsInactive(): void
     {
         // Arrange
@@ -151,9 +142,6 @@ class ShopCmsSlotTwigPluginTest extends Unit
         $this->assertSame('', $shopCmsSlotContent);
     }
 
-    /**
-     * @return void
-     */
     public function testShopCmsSlotTwigPluginReturnsEmptyStringIfSlotDoesNotExist(): void
     {
         // Arrange
@@ -214,11 +202,6 @@ class ShopCmsSlotTwigPluginTest extends Unit
         return $cmsSlotStorageClientMock;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CmsSlotContentResponseTransfer $cmsSlotContentResponseTransfer
-     *
-     * @return void
-     */
     protected function setCmsSlotContentPluginDependency(CmsSlotContentResponseTransfer $cmsSlotContentResponseTransfer): void
     {
         $this->tester->setDependency(
@@ -229,11 +212,6 @@ class ShopCmsSlotTwigPluginTest extends Unit
         );
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CmsSlotStorageTransfer|null $cmsSlotStorageTransfer
-     *
-     * @return void
-     */
     protected function setCmsSlotStorageClientDependency(?CmsSlotStorageTransfer $cmsSlotStorageTransfer): void
     {
         $this->tester->setDependency(

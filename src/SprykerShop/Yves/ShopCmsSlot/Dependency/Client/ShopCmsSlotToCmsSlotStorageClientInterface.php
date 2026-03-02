@@ -11,10 +11,5 @@ use Generated\Shared\Transfer\CmsSlotStorageTransfer;
 
 interface ShopCmsSlotToCmsSlotStorageClientInterface
 {
-    /**
-     * @param string $cmsSlotKey
-     *
-     * @return \Generated\Shared\Transfer\CmsSlotStorageTransfer
-     */
     public function getCmsSlotByKey(string $cmsSlotKey): CmsSlotStorageTransfer;
 }

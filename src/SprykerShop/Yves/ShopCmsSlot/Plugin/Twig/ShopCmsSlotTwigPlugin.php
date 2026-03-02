@@ -26,11 +26,6 @@ class ShopCmsSlotTwigPlugin extends AbstractTwigExtensionPlugin
         ];
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CmsSlotContextTransfer $cmsSlotContextTransfer
-     *
-     * @return string
-     */
     public function getSlotContent(CmsSlotContextTransfer $cmsSlotContextTransfer): string
     {
         $cmsSlotContentResponseTransfer = $this->getFactory()

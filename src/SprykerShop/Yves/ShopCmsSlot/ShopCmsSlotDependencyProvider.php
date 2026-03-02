@@ -32,11 +32,6 @@ class ShopCmsSlotDependencyProvider extends AbstractBundleDependencyProvider
      */
     public const PLUGINS_CMS_SLOT_CONTENT = 'PLUGINS_CMS_SLOT_CONTENT';
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     public function provideDependencies(Container $container): Container
     {
         $container = $this->addCmsSlotContentPlugin($container);
@@ -46,11 +41,6 @@ class ShopCmsSlotDependencyProvider extends AbstractBundleDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addCmsSlotContentPlugin(Container $container): Container
     {
         $container->set(static::PLUGINS_CMS_SLOT_CONTENT, function () {
@@ -60,11 +50,6 @@ class ShopCmsSlotDependencyProvider extends AbstractBundleDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addCmsSlotClient(Container $container): Container
     {
         $container->set(static::CLIENT_CMS_SLOT, function (Container $container) {
@@ -74,11 +59,6 @@ class ShopCmsSlotDependencyProvider extends AbstractBundleDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addCmsSlotStorageClient(Container $container): Container
     {
         $container->set(static::CLIENT_CMS_SLOT_STORAGE, function (Container $container) {

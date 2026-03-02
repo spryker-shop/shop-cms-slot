@@ -11,15 +11,6 @@ use Twig\Node\Node;
 
 class ShopCmsSlotNodeBuilder implements ShopCmsSlotNodeBuilderInterface
 {
-    /**
-     * @param string $cmsSlotKey
-     * @param array $nodes
-     * @param array $attributes
-     * @param int $lineno
-     * @param string $tag
-     *
-     * @return \Twig\Node\Node
-     */
     public function createShopCmsSlotNode(
         string $cmsSlotKey,
         array $nodes,

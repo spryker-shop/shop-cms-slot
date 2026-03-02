@@ -50,17 +50,11 @@ class ShopCmsSlotTokenParser extends AbstractTokenParser
      */
     protected $shopCmsSlotNodeBuilder;
 
-    /**
-     * @param \SprykerShop\Yves\ShopCmsSlot\Twig\Node\ShopCmsSlotNodeBuilderInterface $shopCmsSlotNodeBuilder
-     */
     public function __construct(ShopCmsSlotNodeBuilderInterface $shopCmsSlotNodeBuilder)
     {
         $this->shopCmsSlotNodeBuilder = $shopCmsSlotNodeBuilder;
     }
 
-    /**
-     * @return string
-     */
     public function getTag(): string
     {
         return 'cms_slot';
@@ -103,11 +97,6 @@ class ShopCmsSlotTokenParser extends AbstractTokenParser
             ->createShopCmsSlotNode($cmsSlotKey, $nodes, $attributes, $token->getLine(), $this->getTag());
     }
 
-    /**
-     * @param \Twig\TokenStream $stream
-     *
-     * @return \Twig\Node\Node|null
-     */
     protected function parseAutoFilled(TokenStream $stream): ?Node
     {
         if (!$stream->nextIf(Token::NAME_TYPE, static::PARAMETER_NAME_AUTOFILLED)) {
@@ -117,11 +106,6 @@ class ShopCmsSlotTokenParser extends AbstractTokenParser
         return $this->parser->getExpressionParser()->parseExpression();
     }
 
-    /**
-     * @param \Twig\TokenStream $stream
-     *
-     * @return \Twig\Node\Node|null
-     */
     protected function parseRequired(TokenStream $stream): ?Node
     {
         if (!$stream->nextIf(Token::NAME_TYPE, static::PARAMETER_NAME_REQUIRED)) {
@@ -131,11 +115,6 @@ class ShopCmsSlotTokenParser extends AbstractTokenParser
         return $this->parser->getExpressionParser()->parseExpression();
     }
 
-    /**
-     * @param \Twig\TokenStream $stream
-     *
-     * @return \Twig\Node\Node|null
-     */
     protected function parseWith(TokenStream $stream): ?Node
     {
         if (!$stream->nextIf(Token::NAME_TYPE, static::PARAMETER_NAME_WITH)) {

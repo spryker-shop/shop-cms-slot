@@ -21,25 +21,16 @@ use SprykerShop\Yves\ShopCmsSlot\Twig\TokenParser\ShopCmsSlotTokenParser;
  */
 class ShopCmsSlotFactory extends AbstractFactory
 {
-    /**
-     * @return \SprykerShop\Yves\ShopCmsSlot\Twig\TokenParser\ShopCmsSlotTokenParser
-     */
     public function createShopCmsSlotTokenParser(): ShopCmsSlotTokenParser
     {
         return new ShopCmsSlotTokenParser($this->createShopCmsSlotNodeBuilder());
     }
 
-    /**
-     * @return \SprykerShop\Yves\ShopCmsSlot\Twig\Node\ShopCmsSlotNodeBuilderInterface
-     */
     public function createShopCmsSlotNodeBuilder(): ShopCmsSlotNodeBuilderInterface
     {
         return new ShopCmsSlotNodeBuilder();
     }
 
-    /**
-     * @return \SprykerShop\Yves\ShopCmsSlot\Business\CmsSlotDataProviderInterface
-     */
     public function createCmsSlotDataProvider(): CmsSlotDataProviderInterface
     {
         return new CmsSlotDataProvider(
@@ -58,17 +49,11 @@ class ShopCmsSlotFactory extends AbstractFactory
         return $this->getProvidedDependency(ShopCmsSlotDependencyProvider::PLUGINS_CMS_SLOT_CONTENT);
     }
 
-    /**
-     * @return \SprykerShop\Yves\ShopCmsSlot\Dependency\Client\ShopCmsSlotToCmsSlotClientInterface
-     */
     public function getCmsSlotClient(): ShopCmsSlotToCmsSlotClientInterface
     {
         return $this->getProvidedDependency(ShopCmsSlotDependencyProvider::CLIENT_CMS_SLOT);
     }
 
-    /**
-     * @return \SprykerShop\Yves\ShopCmsSlot\Dependency\Client\ShopCmsSlotToCmsSlotStorageClientInterface
-     */
     public function getCmsSlotStorageClient(): ShopCmsSlotToCmsSlotStorageClientInterface
     {
         return $this->getProvidedDependency(ShopCmsSlotDependencyProvider::CLIENT_CMS_SLOT_STORAGE);

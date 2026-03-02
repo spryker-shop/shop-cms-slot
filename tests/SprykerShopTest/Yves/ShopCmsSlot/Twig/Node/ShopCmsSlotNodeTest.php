@@ -16,9 +16,6 @@ use Twig\Test\NodeTestCase;
 
 class ShopCmsSlotNodeTest extends NodeTestCase
 {
-    /**
-     * @return array
-     */
     public function getTests(): array
     {
         return [

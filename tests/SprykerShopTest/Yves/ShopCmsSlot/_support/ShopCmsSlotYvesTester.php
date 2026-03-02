@@ -32,21 +32,11 @@ class ShopCmsSlotYvesTester extends Actor
 {
     use _generated\ShopCmsSlotYvesTesterActions;
 
-    /**
-     * @param array $seedData
-     *
-     * @return \Generated\Shared\Transfer\CmsSlotContentResponseTransfer
-     */
     public function getCmsSlotContentResponseTransfer(array $seedData = []): CmsSlotContentResponseTransfer
     {
         return (new CmsSlotContentResponseBuilder($seedData))->build();
     }
 
-    /**
-     * @param array $seedData
-     *
-     * @return \Generated\Shared\Transfer\CmsSlotStorageTransfer
-     */
     public function getCmsSlotStorageTransfer(array $seedData = []): CmsSlotStorageTransfer
     {
         return (new CmsSlotStorageBuilder($seedData))->build();

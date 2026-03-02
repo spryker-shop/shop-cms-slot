@@ -20,13 +20,6 @@ class ShopCmsSlotNode extends TwigNode
      */
     protected $cmsSlotKey;
 
-    /**
-     * @param string $cmsSlotKey
-     * @param array $nodes
-     * @param array $attributes
-     * @param int $lineno
-     * @param string|null $tag
-     */
     public function __construct(
         string $cmsSlotKey,
         array $nodes,
@@ -39,11 +32,6 @@ class ShopCmsSlotNode extends TwigNode
         parent::__construct($nodes, $attributes, $lineno, $tag);
     }
 
-    /**
-     * @param \Twig\Compiler $compiler
-     *
-     * @return void
-     */
     public function compile(TwigCompiler $compiler): void
     {
         $compiler->addDebugInfo($this)->raw(
@@ -64,12 +52,6 @@ class ShopCmsSlotNode extends TwigNode
         $compiler->raw('));');
     }
 
-    /**
-     * @param \Twig\Compiler $compiler
-     * @param string $nodeName
-     *
-     * @return void
-     */
     protected function compileArrayNode(TwigCompiler $compiler, string $nodeName): void
     {
         if (!$this->hasNode($nodeName)) {
